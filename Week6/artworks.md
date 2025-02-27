@@ -1,0 +1,5 @@
+# Artwork that resonates with me
+
+Youth Mode: A Report on Freedom. I found this piece to be interesting because it reminds me how during a person’s childhood, we might feel free to do what we want with no stress or concerns about what will happen the next day. Now, when we’re older and have an understanding of the world around us, we’re always trying to connect with our younger self again.  We say we want to be older like our older siblings or cousins, but when we actually are at that age, we want to go back to when we were 5-9 years old. Of course, we can’t do so as adults, so whenever we have the opportunity, we try to do something that would satisfy our inner child. Even seeing my parents laughing together, I can see their younger self coming out. 
+
+![](https://d1v7jayx2s9clc.cloudfront.net/user/pages/youth-mode-a-report-on-freedom/00-youthmode-5-17.jpg)
