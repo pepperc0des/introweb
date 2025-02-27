@@ -1,13 +1,11 @@
 body {
   font-family: Arial, sans-serif;
   background-color: rgb(152, 246, 152);
-  background-color: lightseagreen;
 }
 
 .container {
   width: 80%;
-  margin: auto;
-  text-align: center;
+  text-align: left;
 }
 
 h1 {
@@ -30,4 +28,8 @@ p {
 img {
   width: 100%;
   height: auto;
+}
+
+li {
+  font-style: bold;
 }
