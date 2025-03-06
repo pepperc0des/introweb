@@ -1,0 +1,72 @@
+body {
+    background-color: #F7F7F7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-container {
+    background-color: #F0EED3;
+    border: 2px solid black;
+    border-radius: 54px;
+    padding: 20px;
+    height: 338px;
+    width: 778px;
+    margin: 0 auto;
+    transform: translate(0, 150px);
+    transition-timing-function: ease-in-out;
+    transition: 1.5s;
+}
+
+.card-container:hover {
+    box-shadow: 0 4px 8px 0 #000000, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.05);
+}
+img {
+    border: 3px solid black;
+    border-radius: 50%;
+    height: 170px;
+}
+
+.info-container {
+    transform: translate(200px, -150px);
+}
+
+h2 {
+    font-size: 48px;
+    transform: translate(0, -65px);
+}
+
+.address {
+    font-size: 22px;
+    transform: translate(0, -79px);
+}
+
+.service-container {
+    transform: translate(40px, -200px);
+    width: 251px;
+    height: 130px;
+}
+
+.service {
+    font-size: 28px;   
+}
+
+li {
+    font-size: 22px;
+    transform: translate(58px, -25px);
+}
+
+.contact-container {
+    transform: translate(400px, -358.8px);
+    width: 303px;
+    height: 100px;
+}
+
+.contact {
+    font-size: 28px;
+}
+
+.contactinfo {
+    font-size: 22px;
+    transform: translate(45px, -25px);
+    list-style-type: none;
+}
