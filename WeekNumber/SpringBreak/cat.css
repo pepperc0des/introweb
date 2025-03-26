@@ -1,0 +1,23 @@
+body {
+    background-color: rosybrown;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    width: 30%;
+    height: 30%;
+    border: 1px solid pink;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 50px;
+}
+
+a {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover {
+    color: pink;;
+}

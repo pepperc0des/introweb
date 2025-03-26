@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peeka-Boo!</title>
+    <link rel="stylesheet" href="peekaboo.css">
+</head>
+<body>
+    <div class="page" id="wholePage">
+        <nav>
+            <a href="previous.html">Previous</a>
+            <a href="next.html">Next</a>
+        </nav>
+        <main>
+            <div class="title">
+                <h1>Peeka-Boo</h1>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Voluptatem inventore adipisci omnis doloribus voluptates expedita officiis, 
+                excepturi repellendus doloremque sint ratione unde dignissimos, 
+                placeat alias aliquid. Vitae repudiandae aperiam quo.
+            </p>
+        </main>
+        <section>
+            <div class="about">
+                <h2>About</h2>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Voluptatem inventore adipisci omnis doloribus voluptates expedita officiis, 
+                        excepturi repellendus doloremque sint ratione unde dignissimos, 
+                        placeat alias aliquid. Vitae repudiandae aperiam quo.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="position" id="positioning">
+            <h2>Positioning</h2>
+            <div class="box-container">
+                <div class="little-box relative">
+                    Relative
+                </div>
+                <div class="little-box absolute">
+                    Absolute
+                </div>
+                <div class="little-box fixed">
+                    Fixed
+                </div>
+                <div class="little-box sticky">
+                    Sticky
+                </div>
+                <div class="little-box static">
+                    Static
+                </div>
+            </div>
+        </section>
+        <section class="js">
+            <h2>peeka</h2>
+            <div class="js-content">
+                <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Voluptatem inventore adipisci omnis doloribus voluptates expedita officiis, 
+                    excepturi repellendus doloremque sint ratione unde dignissimos, 
+                    placeat alias aliquid. Vitae repudiandae aperiam quo.
+                </p>
+            </div>
+            <button id="pressme" onclick="document.getElementById('text').style.color='blue'">Press me!</button>
+        </section>
+    </div>
+        <section class="peeka-boo">
+            <button onclick="document.getElementById('wholePage').style.display='none'">Peeka</button>
+            <button onclick="document.getElementById('wholePage').style.display='block'">Boo!</button>
+        </section>
+        <footer>
+            <p>&copy; 2025</p>
+        </footer>    
+</body>
+</html>

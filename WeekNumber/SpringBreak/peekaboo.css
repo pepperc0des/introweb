@@ -1,0 +1,135 @@
+body {
+    background-color: #f1b9e4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #fc7cde;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    color: rgb(249, 95, 213);
+    font-weight: bold;
+}
+
+h2:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+main {
+    background-color: #ff48d4;
+    text-align: center;
+}
+
+.about {
+    background-color: #fdafeb;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid black;
+}
+
+.about .content{
+    background-color: #cd3bab;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.position {
+    background-color: deeppink;
+    border: 1px solid black;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+button:hover {
+    background-color: azure;
+    transition: 1.1s;
+}
+.box-container {
+    background-color: #f1b9e4;
+    border: 3px dashed black;
+    margin: 20px;
+    padding: 20px;
+    position:relative;
+    height: 50%; 
+    box-sizing: border-box;
+}
+
+.little-box {
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.relative {
+    background-color: #fdafeb;
+    position: relative;
+    top: 10px;
+    left: 55%;    
+}
+
+.absolute {
+    background-color: #fdafeb;
+    position: absolute;
+    top: 160px;
+    right: 50px;
+}
+
+.fixed {
+    background-color: #fdafeb;
+    position: fixed;
+    bottom: 5px;
+    left: 85%;
+}
+
+.sticky {
+    background-color: #fdafeb;
+    position: sticky;
+    top: 10px
+}
+
+.static {
+    background-color: #fdafeb;
+    position: static;
+}
+.js {
+    background-color: #ec6cf3;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+button {
+    background-color: #fdafeb;
+    border: 1px solid black;
+    border-radius: 10vh;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.peeka-boo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
