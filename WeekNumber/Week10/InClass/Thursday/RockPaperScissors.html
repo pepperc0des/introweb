@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    <button class="choice" value="rock">Rock</button>
+    <button class="choice" value="paper">Paper</button>
+    <button class="choice" value="scissors">Scissors</button>
+    <p id="result"></p>
+
+    <button id="reset">Restart</button>
+
+    <script>
+        const choices = ['rock', 'paper', 'scissors'];
+        const computerChoice = choices[choices.length];
+        let result = 0;
+
+        document.querySelectorAll('.choice').forEach(button => {
+            button.addEventListener('click', function() {
+                const playerChoice = this.value;
+                const computerChoice = getComputerChoice();
+                playGame(playerChoice, computerChoice);
+            });
+        });
+        
+        document.getElementById('reset').addEventListener('click', reset);
+
+        function getComputerChoice() {
+            const randomIndex = Math.floor(Math.random() * choices.length);
+            return choices[randomIndex];
+        }
+
+        function playGame(playerChoice, computerChoice) {
+            if (playerChoice === computerChoice) {
+                document.createElement('p').innerText = 'It\'s a tie!';
+            } else if (
+                (playerChoice === 'rock' && computerChoice === 'scissors') ||
+                (playerChoice === 'paper' && computerChoice === 'rock') ||
+                (playerChoice === 'scissors' && computerChoice === 'paper')
+            ) {
+                document.createElement('p').textContent = 'You win!';
+                result++;
+                document.getElementById('result').innerHTML = result;
+            } else {
+                document.createElement('p').textContent = 'You lose!';
+            }
+        }
+        
+        function reset() {
+            document.getElementById('result').innerText = '';
+            result = 0;
+        }
+    </script>
+</body>
+</html>
