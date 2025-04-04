@@ -1,4 +1,17 @@
 body {
-    background-color: darkolivegreen;
-    
+    background-color: rgb(104, 124, 70);   
+}
+
+h1
+
+button {
+    border: 1.5px solid black;
+    border-radius: 5px 5px;
+}
+
+button:hover {
+    background-color: rgb(235, 245, 150);
+    color: rgb(0, 0, 0);
+    scale: 1.1;
+    transition: 0.3s;
 }
