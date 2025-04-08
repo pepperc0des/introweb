@@ -55,7 +55,12 @@ function celsiusToFahrenheit (){
     alert("Celsius: " + celsius + " Fahrenheit: " + Math.round(fahrenheit));
 }
 
-function stringManipulation(words){
-    var str = words;
-    
+function stringManipulation(words) {
+    var upperCase = words.toUpperCase();
+    var characterCount = words.length;
+    alert("Uppercase: " + upperCase + " Character Count: " + characterCount);
+    return {
+        upperCase: upperCase,
+        characterCount: characterCount
+    };
 }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Grocery List</h1>
+    <input type="text" id="groceryInput" placeholder="Enter grocery item">
+    <button onclick="addGrocery()">Add to List</button>
+    <input type="text" id="removeInput" placeholder="Enter an item to remove">
+    <button onclick="removeGrocery()">Remove Grocery</button>
+    <ul id="list"></ul>
+
+    <h1>Math Problems</h1>
+    <input type="text" id="mathInput" placeholder="Enter an easy math problem">
+    <button onclick="mathProblems()">Click me!</button>
+    <ul id="mathList"></ul>
+    <script>
+        const groceryList = [];
+        const mathProblemsList = [];
+
+        function addGrocery() {
+            const groceryInput = document.getElementById('groceryInput').value;
+            if (groceryInput === '') {
+                alert('Please enter a grocery item.');
+                return;
+            }
+            groceryList.push(groceryInput);
+
+            updateList();
+
+            document.getElementById('groceryInput').value = '';
+        }
+
+        function updateList(){
+            const list = document.getElementById('list');
+            list.innerHTML = '';
+
+            for (let i = 0; i < groceryList.length; i++) {
+                const li = document.createElement('li');
+                li.textContent = groceryList[i];
+                list.appendChild(li);
+            }
+        }
+
+        function mathProblems() {
+            const userInput = document.getElementById('mathInput').value;
+            if (userInput === '') {
+                alert('Please enter a math problem.');
+                return;
+            }
+            mathProblemsList.push(userInput);
+
+            updateMathList();
+
+            document.getElementById('mathInput').value = '';
+        }
+
+        function updateMathList() {
+            const mathList = document.getElementById('mathList');
+            mathList.innerHTML = '';
+
+            for (let i = 0; i < mathProblemsList.length; i++) {
+                const li = document.createElement('li');
+                li.textContent = mathProblemsList[i];
+                mathList.appendChild(li);
+            }
+        }
+
+        function removeGrocery(index) {
+            groceryList.splice(index, groceryList.length - 1);
+            updateList();
+        }
+    </script>
+    <script></script>
+</body>
+</html>
