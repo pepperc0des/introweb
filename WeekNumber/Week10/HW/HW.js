@@ -4,6 +4,7 @@ var age = 18;
 var favNumber = 3.1;
 const numberCalculate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var calculateResult = 0;
+var isLightOn = true
 
 
 function helloWorld() {
@@ -63,4 +64,22 @@ function stringManipulation(words) {
         upperCase: upperCase,
         characterCount: characterCount
     };
+}
+
+function onOff(){
+    if (isLightOn === true){
+        document.getElementById("light").style.color = "white";
+        isLightOn = false;
+    } else {
+        document.getElementById("light").style.color = "rgb(0, 0, 0)";
+        isLightOn = true;
+    }
+}
+
+function countByTwo(num){
+    let result = [];
+    for (let i = 0; i <= num; i += 2){
+        result.push(i);
+    }
+    document.getElementById("countResult").innerHTML = result.join(", ");
 }

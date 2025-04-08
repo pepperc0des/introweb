@@ -10,40 +10,65 @@
     <header>JavaScript</header>
     <div class="helloWorld">
         <h1>Hello World</h1>
-        <button onclick="helloWorld()">Hello World</button>
-        <p id="output">Click the button to see the message.</p>
+        <div class="content">
+            <button onclick="helloWorld()">Hello World</button>
+            <p id="output">Click the button to see the message.</p>
+        </div>
     </div>
     
     <div class="variablePractice">
         <h1>Variable Practice</h1>
-        <button onclick="variablePractice()">Click me!</button>
-        <p>Check Console Log :D .</p>
+        <div class="content">
+            <button onclick="variablePractice()">Click me!</button>
+            <p>Check Console Log :D .</p>
+        </div>
     </div>
 
     <div class="calculate">
         <h1>Calculate</h1>
-        <button id="add" onclick="calculate('add')">Add</button>
-        <button id="subtract" onclick="calculate('subtract')">Subtraction</button>
-        <button id="multiply" onclick="calculate('multiply')">Multiplication</button>
-        <button id="divide" onclick="calculate('divide')">Division</button>
-        <p id="calculateOutput">Check Console Log :D .</p>
+        <div class="content">
+            <button id="add" onclick="calculate('add')">Add</button>
+            <button id="subtract" onclick="calculate('subtract')">Subtraction</button>
+            <button id="multiply" onclick="calculate('multiply')">Multiplication</button>
+            <button id="divide" onclick="calculate('divide')">Division</button>
+            <p id="calculateOutput">Check Console Log :D .</p>
+        </div>
     </div>
 
     <div class="temperatureConverter">
         <h1>Temperature Converter</h1>
-        <input type="number" id="tempInputF" placeholder="Enter temperature in Fahrenheit">
-        <button onclick="fahrenheitToCelsius()">Convert to Celsius</button>
-        <br><br>
-        <input type="number" id="tempInputC" placeholder="Enter temperature in Celsius">
-        <button onclick="celsiusToFahrenheit()">Convert to Fahrenheit</button>
+        <div class="content">
+            <input type="number" id="tempInputF" placeholder="Enter temperature in Fahrenheit">
+            <button onclick="fahrenheitToCelsius()">Convert to Celsius</button>
+            <br><br>
+            <input type="number" id="tempInputC" placeholder="Enter temperature in Celsius">
+            <button onclick="celsiusToFahrenheit()">Convert to Fahrenheit</button>
+        </div>
     </div>
-    <script src="HW.js"></script>
+    
 
     <div class="string-manipulation">
         <h1>String Manipulation</h1>
-        <input type="text" id="stringInput" placeholder="Enter a string">
-        <button onclick="let text = document.getElementById('stringInput').value; stringManipulation(text)">Click me!</button>
-        <!-- <p id="stringOutput">Check Console Log :D .</p> -->
+        <div class="content">
+            <input type="text" id="stringInput" placeholder="Enter a string">
+            <button onclick="let text = document.getElementById('stringInput').value; stringManipulation(text)">Click me!</button>
+        </div>
     </div>
+
+    <div class="lightOnOff">
+        <div class="content">
+            <button id="switch" onclick="onOff()">Press Me!</button>
+            <h2 id="light">Light is On</h2>
+        </div>
+    </div>
+    
+    <div class="twoCount">
+        <h1>Two Count</h1>
+        <div class="content">
+            <button onclick="countByTwo(20)">Click me!</button>
+            <p id="countResult"></p>
+        </div>
+    </div>
+    <script src="HW.js"></script>
 </body>
 </html>

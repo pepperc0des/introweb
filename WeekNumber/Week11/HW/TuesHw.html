@@ -70,7 +70,14 @@
         }
 
         function removeGrocery(index) {
-            groceryList.splice(index, groceryList.length - 1);
+            const groceryRemove = document.getElementById('removeInput').value;
+            const index = groceryList.indexOf(groceryRemove);
+            if (index !== -1) {
+                groceryList.splice(index, 1);
+            } else {
+                alert('Item not found in the grocery list.');
+                return;
+            }
             updateList();
         }
     </script>
