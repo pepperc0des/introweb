@@ -3,7 +3,7 @@ var name = "Yi Li";
 var age = 18;
 var favNumber = 3.1;
 const numberCalculate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var calculateResult
+var calculateResult = 0;
 
 
 function helloWorld() {
@@ -41,5 +41,21 @@ function calculate(operation) {
     console.log("Result: " + Math.floor(calculateResult));
 }
 
+function fahrenheitToCelsius (){
+    var celsius = 0;
+    let fahrenheit = document.getElementById("tempInputF").value;
+    celsius = (fahrenheit - 32) * 5 / 9;
+    alert("Fahrenheit: " + fahrenheit + " Celsius: " + Math.round(celsius));
+}
 
+function celsiusToFahrenheit (){
+    var fahrenheit = 0;
+    let celsius = document.getElementById("tempInputC").value;
+    fahrenheit = (celsius * 9 / 5) + 32;
+    alert("Celsius: " + celsius + " Fahrenheit: " + Math.round(fahrenheit));
+}
 
+function stringManipulation(words){
+    var str = words;
+    
+}
