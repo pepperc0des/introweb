@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="TuesHW.css">
+    <title>Homework</title>
 </head>
 <body>
-    <h1>Grocery List</h1>
-    <input type="text" id="groceryInput" placeholder="Enter grocery item">
-    <button onclick="addGrocery()">Add to List</button>
-    <input type="text" id="removeInput" placeholder="Enter an item to remove">
-    <button onclick="removeGrocery()">Remove Grocery</button>
-    <ul id="list"></ul>
-
-    <h1>Math Problems</h1>
-    <input type="text" id="mathInput" placeholder="Enter an easy math problem">
-    <button onclick="mathProblems()">Click me!</button>
-    <ul id="mathList"></ul>
+    <div class="grocery">
+        <h1>Grocery List</h1>
+        <input type="text" id="groceryInput" placeholder="Enter grocery item">
+        <button onclick="addGrocery()">Add to List</button>
+        <input type="text" id="removeInput" placeholder="Enter an item to remove">
+        <button onclick="removeGrocery()">Remove Grocery</button>
+        <ul id="list"></ul>    
+    </div>
+    <div class="math">
+        <h1>Math Problems</h1>
+        <input type="text" id="mathInput" placeholder="Enter an easy math problem">
+        <button onclick="mathProblems()">Click me!</button>
+        <ul id="mathList"></ul>
+    </div>
+   
     <script>
         const groceryList = [];
         const mathProblemsList = [];
@@ -69,16 +74,21 @@
             }
         }
 
-        function removeGrocery(index) {
+        function removeGrocery() {
             const groceryRemove = document.getElementById('removeInput').value;
             const index = groceryList.indexOf(groceryRemove);
-            if (index !== -1) {
-                groceryList.splice(index, 1);
-            } else {
-                alert('Item not found in the grocery list.');
+            if (groceryRemove === '') {
+                alert('Please enter an item to remove.');
                 return;
             }
-            updateList();
+            
+            if (index !== -1) {
+                groceryList.splice(index, 1);
+                updateList();
+                document.getElementById('removeInput').value = '';
+            } else {
+                alert('Item not found in the grocery list.');
+            }
         }
     </script>
     <script></script>
