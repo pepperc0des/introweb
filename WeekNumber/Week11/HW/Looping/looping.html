@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping</title>
+</head>
+<body>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        .a11y-label {
+            margin: 0;
+            text-align: right;
+            font-size: 0.7rem;
+            width: 98%;
+        }
+
+        body {
+            margin: 10px;
+            background: #f5f9fa;
+        }
+    </style>
+
+    <div class="output"></div>
+    <div class="admitted"></div>
+    <div class="refused"></div>
+
+    <script>
+        const output = document.querySelector('.output');
+        output.textContent = "";
+        
+        let i = 10;
+
+        while (i >= 0) {
+            const para = document.createElement('p');
+            if (i === 10) {
+                para.textContent = `Countdown 10`;
+            } else if (i === 0) {
+                para.textContent = "Blast off!";
+            } else { 
+                para.textContent = i;
+            }
+            output.appendChild(para);
+
+            i--;
+        }
+        // const para = document.createElement('p');
+        // para.textContent = ;
+        // output.appendChild(para);
+
+
+
+        const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+
+        const admitted = document.querySelector('.admitted');
+        const refused = document.querySelector('.refused');
+        admitted.textContent = 'Admit: ';
+        refused.textContent = 'Refuse: ';
+
+        // loop starts here
+        for (i = 0; i < people.length; i++) {
+            const para = document.createElement('p');
+            if (people[i] === 'Phil' || people[i] === 'Lola') {
+                refused.textContent += people[i] + ', ';
+                para.textContent = `${people[i]} has been refused.`;
+            } else {
+                admitted.textContent += people[i] + ', ';
+                para.textContent = `${people[i]} has been admitted.`;
+            }
+            output.appendChild(para);
+        }
+        // refused.textContent += ;
+        // admitted.textContent += ;
+    </script>
+</body>
+</html>
