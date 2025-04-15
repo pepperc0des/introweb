@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandDuck</title>
+</head>
+<body>
+    <div class="content-container">
+        <div id="duck">
+            <img src="" alt="duck" id="duck-image" />
+            <div class="detail">
+                <p id="duck-name"></p>
+                <button id="get-duck">Get Random Duck</button>
+        </div>
+    </div>
+
+    <script>
+        async function loadDuckImage() {
+            const response = await fetch('https://random-d.uk/api/v2/random');
+            const data = await response.json();
+
+            const duckImage = document.getElementById('duck-image');
+            const duckName = document.getElementById('duck-name');
+            duckImage.src = data.url;
+            duckName.innerText = `Duck Name: ${data.url.split('/').pop()}`;
+            duckImage.style.display = 'block';
+        }
+
+        document.getElementById('get-duck').addEventListener('click', loadDuckImage);
+        
+
+
+    </script>
+</body>
+</html>
