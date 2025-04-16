@@ -62,20 +62,13 @@
     </div>
     <script>
         async function loadDisneyChar() {
-            const res = await fetch('https://api.disneyapi.dev/character');
-            const films = await res.json();
+            const res = await fetch('https://api.disneyapi.dev/characters');
+            const data = await res.json();
 
-            const randomChar = films[Math.floor(Math.random() * films.length)];
+            const randomChar = characters[Math.floor(Math.random() * characters.length)];
             document.querySelector('name').innerText = randomChar.name;
-            document.querySelector('.description').innerText = randomChar.description || 'No description available.';
+            document.querySelector('.description').innerText = randomChar.description;
             
-            if (randomFilm.image) {
-                const image = document.querySelector('image');
-                image.src = randomChar.imageUrl || 'https://via.placeholder.com/150';
-                image.style.display = "block";
-            } else {
-                document.querySelector('image').style.display = "none";
-            }
         }
     </script>
 </body>
